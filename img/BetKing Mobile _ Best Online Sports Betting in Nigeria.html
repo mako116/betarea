@@ -1,0 +1,389 @@
+
+
+
+<!doctype html>
+
+<html ng-app="app" ng-controller="MainController as mainCtrl" ng-strict-di>
+<head profile="http://www.w3.org/2005/10/profile">
+    <base href="/en/">
+
+    <title>BetKing Mobile | Best Online Sports Betting in Nigeria</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="robots" content="">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+
+    <link rel="apple-touch-icon" sizes="76x76" href="https://mobilelitecdn.betking.com//images/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://mobilelitecdn.betking.com//images/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://mobilelitecdn.betking.com//images/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://mobilelitecdn.betking.com//images/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://mobilelitecdn.betking.com//images/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="https://mobilelitecdn.betking.com//images/favicons/icon-normal.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://mobilelitecdn.betking.com//images/favicons/icon-hires.png">
+    <link rel="shortcut icon" sizes="16x16" href="https://mobilelitecdn.betking.com//images/favicon.ico" />
+
+
+    <!-- Locale -->
+    <script src="https://mobilelitecdn.betking.com//dist/locale/base/en.js?v=2022_08.01.00"></script>
+        <script src="https://mobilelitecdn.betking.com//dist/locale/override/en.js?v=2022_08.01.00"></script>
+
+        <link rel="stylesheet" href="https://mobilelitecdn.betking.com//dist/css/bower.min.css?v=2022_08.01.00">
+        <link rel="stylesheet" href="https://mobilelitecdn.betking.com//dist/css/site.min.css?v=2022_08.01.00">
+        <script src="https://mobilelitecdn.betking.com//dist/js/bower.min.js?v=2022_08.01.00"></script>
+        <script src="https://mobilelitecdn.betking.com//dist/js/site.min.js?v=2022_08.01.00"></script>
+
+
+    
+
+
+<script type="text/javascript">
+    // declare global variables
+    globalSettings = {
+        // When updating the globalSettings make sure to update confluence document 20742399
+
+        // Server Settings
+        DebugMode: false,
+        IsMultiLanguage: false,
+
+        // Versioning settings
+        SiteVersion: "2022_08.01.00",
+
+        // Languages and locales
+        CurrentLanguage: "en",
+        CurrentLocale: "en-GB",
+        LanguageIsoCode: "eng",
+
+        //Connection Settings
+        SiteContentURL: "https://mobilelitecdn.betking.com/",
+        SportsBookApiURL: "https://sportsapi.betagy.services/",
+        SportsBookFeedApiURL: "https://sportsapicdn-mobilelite.betking.com/",
+        GuardianURL: "https://auth-api-betagy.betagy.services/",
+        F2PGuardianURL: "https://auth-api-betagy.f2p.services/",
+        GamingApiURL: "https://website-api-betking.betagy.services/",
+        WebsiteApiURL: "https://frontendservices.betagy.services/",
+        SharedResourceURL: "https://localecdn.betking.com/",
+        ImageResourceURL: "https://localecdn.betking.com/" + "images/",
+        FrontendApiURL: "https://frontend-api.betagy.services/",
+        Tracking_EnableDataLayer: true,
+
+        //Logging Settings
+        LogToAPI: false,
+        LogLevel: "ERROR",
+
+        //Skin/Website General Settings
+        //Enable/Disable Features
+        ShowBankProfileIndicator: 0,
+        backUrl: "",
+        EnableSessionTimeout: false,
+        EnableRealityCheck: false,
+        Coupon_EnableBook: true,
+        EnableSplitOutrightPrematch: true,
+        Sports_EnableCouponConfirmation: false,
+        Sports_SelectFilterOddsAllByDefault: true,
+        MobileLiteRedirectURL: "",
+        ScheduleTimeFrame: 4,
+        General_EnableOTPbySms: true,
+        General_OTPCodeLength: 4,
+        General_EnableMobilePhoneVerification: false,
+        General_AllowUnconfirmedUsers: false,
+        General_RouteWhiteListForLockedUsers: "/account/withdraw,/account/changephonenumber,/account/betsearch",
+        General_GeoAccessControl: {accessBlockingEnabled: true, tldRedirectionEnabled: true, siteCountryCode: 'NG'},
+        General_GeolocationRedirect: {}, // TODO: Phase this out in favour of the newer 'General_GeoAccessControl'
+        General_ReorderDepositMenuItemForFeaturePhones: true,
+        General_AffiliateCookieExpiry: "30",
+
+        //Settings
+        BrandID: "1901",
+        BrandName: "",
+        F2PBrandID: "1999",
+        CanonicalURL: "",
+        ActivitySource: "mobilelite",
+
+        //Desktop Site Settings
+        CurrentDomainURL: "https" + "://" + window.location.host,
+        DesktopSiteURL: "http://betking.com",
+        NewMobileSiteURL: "http://m.betking.com",
+
+        //Sports Section
+        //Enable/Disable Features
+        Sports_CouponDelimiters: "100,150,200,500,1000,5000",
+        EnableLanguageSelection: false,
+        EnableLiveAreaFilters: true,
+        EnableRegionFilters: true,
+        EnableMarketsFilters: true,
+        EnableLessThan2: true,
+        EnableLiveBettingWidget: false,
+        EnableMostPopularWidget: true,
+        ShowEventId: true,
+        BetRadarWidgetsEnabled: true,
+        Sports_BetRadarLiveWidgetURL: "https://widgets.sir.sportradar.com/8291e456ef20ffd848b311f769db64c9/widgetloader",
+        Sports_BetRadarLiveWidgetHideIds: "3,13,16,19,20,21,22,24,29,31,32,34,109,111,112",
+        Sports_BetRadarStatisticsEnabled: 2,
+        Sports_BetRadarStatisticsURL: "https://s5.sir.sportradar.com/betking",
+        Sports_StatisticsWidgetNumberOfMaches: "5",
+        Sports_BetRadarResultsURL: "https://ls.fn.sportradar.com/betking/",
+        Sports_BetRadarTeamLogoURL: "",
+        Sports_ExpandedOdds: "5",
+        Sports_EnableCashOut: true,
+        Sports_OddsViewHelpUrl: "https://www.betking.com/help/sports-help/my-first-bet/",
+        Sports_EnableRebet: true,
+        Sports_CashOutBlackList: "J_CASHIER",
+        Account_BankProfileBlackList: "J_MASTER,J_SUPER_AG,J_CASHIER,PLYSUB",
+        Payment_NotAgentUserType: "J_CASHIER,PLYSUB,PLYON",
+        Sports_CashOutUnavailableCodes: "2,105,107,114,115,200,300,301,302,303,304,306,307,308,309,310",
+        Sports_AllowMultipleOddSelectionPerMatch: "true",
+        Sports_AllowCombinationBets: "true",
+        Sports_UseGetUserDetails: false,
+        Sports_EnableCustomMenu: true,
+        Sports_StakeTaxPercentageToShow: "",
+        Sports_ShowBookedBetDescription: false,
+        Sports_SendBookedCouponCode: true,
+        Sports_LiveMarketGroupingDetailsConfig: [{sportID: 0, marketCount: 10}],
+
+        Payment_NotAgentUserType: "J_CASHIER,PLYSUB,PLYON",
+        Sports_WinningsInfoBubble: false,
+        CookieFirstClick: false,
+        CookieLastClick: true,
+
+        //Social Icons
+        TwitterUrl: '',
+        InstagramUrl: '',
+        FacebookUrl: '',
+        YouTubeUrl: '',
+
+        //Settings
+        LiveWidgetNumberOfEvents: 3,
+        Sports_MostPopular_EventCount: "15",
+        LiveMenuTimer: 8000,
+        LiveOddsTimer: 5000,
+
+        //Live Chat Settings
+        LiveChatIntegration: "sfk",
+        LiveChat_SFK_ButtonID: "5734J000000Ckhg",
+        LiveChat_SFK_DeploymentID: "5724J000000CjxX",
+        LiveChat_SFK_OrganizationID: "00D4J000000CuuI",
+
+        //Account Section
+        Account_EnableWithdrawalBankProfile: true,
+        EnableQuickCashier: "false",
+        Registration_ShowPostCode: false,
+        Registration_DefaultCountry: "NGA",
+        Registration_ShowTaxCode: false,
+        Registration_DefaultCurrency: "NGN",
+        Registration_StateRegionVisible: true,
+        Registration_DeadlineDate: "",
+        Registration_SuccessRedirectUrl: "/help-area/account-tutorials",
+        Registration_QuickRegister: false,
+        Registration_UserJourneyRegister: false,
+        Registration_SplitRegister: true,
+        Registration_Redirect: "",
+        Registration_PrivacyPolicyUrl: "/help-area/terms-and-conditions",
+        Registration_TermsAndConditionsUrl: "",
+        Registration_TutorialButtonHighlight: true,
+        EnableHelpSection: true,
+        Account_QuickCashDelimiters: "{'CBEDeposit':[50,100,200,500,1000],'CBEWithdrawal':[100,200,500,1000,5000],'defaultDeposit':[150,200,500,1000,5000],'defaultWithdrawal':[5000,7000,10000,50000,100000]}",
+        Deposit_IncrementAmountValues: "10,20,50,100,1000",
+        Deposit_GTBankURL: "https://ibank.gtbank.com/GTPay/Tranx.aspx",
+        Payment_EnableWithdrawalReversal: true,
+        PaymentsNodeID: "3255",
+        Account_BetSearch_MonthLimit: "3",
+        Account_ShowSecurityQuestion: false,
+        Account_MobileRegex: "^(0?[1-9])[0-9]{9}$",
+        Account_LoginType: "UsernameOrMobile", // [Username, UsernameOrMobile, Mobile]
+        Account_LoginPrefix: "234",
+        Account_Editability: "One-time",
+        Account_MobileEditability: true,
+        Account_NameSurnameEditability: true,
+        Account_TelephoneEditability: true,
+        Account_EnableWinNotificationSetting: false,
+        Account_CeilMinimumLimit: false,
+        Payment_CheckUserDataUponWithdraw: false,
+        Account_TransactionListDefaultRangeInDays: 3,
+        Account_EnableDepositDefaultRedirection: false,
+        Account_EnableWithdrawalDefaultRedirection: true,
+        Account_EnableMobileVerificationCampaign: true,
+        Account_MobileVerificationCampaignNodeID: "",
+        Account_PaymentsType: "regular", // can be 'regular' or 'userJourney'
+        Account_PaystackDeposit: null,
+        Account_EdsBlackListing: ['InterswitchWebpayDirectDeposit', 'Paystack'],
+        Account_PaymentEnableOfflineSwitch: true,
+        Account_PaymentChannel: "card",
+        Account_KYCVerificationFormUrl: "https://betking.force.com/kycverification/s/?ic_source=mobile&ic_medium=tutorial-page&ic_name=kyc-gtm",
+        Account_EnableWithdrawalNudge: true,
+
+        //Bonus Section
+        BonusEnabled: true,
+
+        //MasterPage Settings
+        MasterPage_GoogleAnalyticsID: "",
+        MasterPage_GoogleTagManagerID: "GTM-T555QRZ",
+
+        //Casino Section
+        LiveCasinoVar : "",
+        EnableCasino: true,
+    };
+
+    // allow overriding of API urls if in a debug environment
+    if (globalSettings.DebugMode == true) {
+        try {
+            var ovrdSportsBookApiURL = localStorage.getItem('ovrdSportsBookApiURL');
+            var ovrdGuardianURL = localStorage.getItem('ovrdGuardianURL');
+            var ovrdGamingApiURL = localStorage.getItem('ovrdGamingApiURL');
+            var ovrdFrontendServicesApiURL = localStorage.getItem('ovrdFrontendServicesApiURL');
+            var ovrdSharedResourceURL = localStorage.getItem('ovrdSharedResourceURL');
+            var ovrdFrontendApiURL = localStorage.getItem('ovrdFrontendApiURL');
+
+            if (ovrdSportsBookApiURL && ovrdSportsBookApiURL.trim().length > 0) {
+                globalSettings.SportsBookApiURL = JSON.parse(ovrdSportsBookApiURL);
+            }
+            if (ovrdGuardianURL && ovrdGuardianURL.trim().length > 0) {
+                globalSettings.GuardianURL = JSON.parse(ovrdGuardianURL);
+            }
+            if (ovrdGamingApiURL && ovrdGamingApiURL.trim().length > 0) {
+                globalSettings.GamingApiURL = JSON.parse(ovrdGamingApiURL);
+            }
+            if (ovrdFrontendServicesApiURL && ovrdFrontendServicesApiURL.trim().length > 0) {
+                globalSettings.WebsiteApiURL = JSON.parse(ovrdFrontendServicesApiURL);
+            }
+            if (ovrdSharedResourceURL && ovrdSharedResourceURL.trim().length > 0) {
+                globalSettings.SharedResourceURL = JSON.parse(ovrdSharedResourceURL);
+            }
+            if (ovrdFrontendApiURL && ovrdFrontendApiURL.trim().length > 0) {
+                globalSettings.FrontendApiURL = JSON.parse(ovrdFrontendApiURL);
+            }
+        } catch(ex) {}
+    }
+</script>
+
+
+    <!-- anti-flicker snippet -->
+    <style>
+        .async-hide {
+            opacity: 0 !important
+        }
+    </style>
+    <script type="text/javascript">
+        if (globalSettings.MasterPage_GoogleTagManagerID !== "") {
+            var containerObject = {};
+            containerObject[globalSettings.MasterPage_GoogleTagManagerID] = true;
+            (function (a, s, y, n, c, h, i, d, e) {
+                s.className += ' ' + y; h.start = 1 * new Date;
+                h.end = i = function () { s.className = s.className.replace(RegExp(' ?' + y), '') };
+                (a[n] = a[n] || []).hide = h; setTimeout(function () { i(); h.end = null }, c); h.timeout = c;
+            })(window, document.documentElement, 'async-hide', 'dataLayer', 4000, containerObject);
+        }
+    </script>
+
+    <script>
+        //Google Analytics
+        if (globalSettings.MasterPage_GoogleAnalyticsID !== "") {
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', globalSettings.MasterPage_GoogleAnalyticsID, 'auto');
+            ga('send', 'pageview');
+        }
+
+        //Google Tag Manager
+        if (globalSettings.MasterPage_GoogleTagManagerID !== "") {
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({
+                    'gtm.start':
+                        new Date().getTime(), event: 'gtm.js'
+                }); var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', globalSettings.MasterPage_GoogleTagManagerID);
+        }
+    </script>
+
+        <script>
+        (function (a, b, c, d, e, f, g, h, i) {
+        a[e] || (i = a[e] = function () { (a[e].q = a[e].q || []).push(arguments) }, i.l = 1 * new Date, i.o = f,
+            g = b.createElement(c), h = b.getElementsByTagName(c)[0], g.async = 1, g.src = d, g.setAttribute("n", e), h.parentNode.insertBefore(g, h)
+        )
+        })(window, document, "script", "https://widgets.sir.sportradar.com/8291e456ef20ffd848b311f769db64c9/widgetloader", "SIR", {
+            theme: false, // using custom theme
+            language: "en"
+        });
+        </script>
+</head>
+
+
+<body ng-controller="AuthController as authCtrl" class="body">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id={{globalSettings.MasterPage_GoogleTagManagerID}}" ng-if="globalSettings.MasterPage_GoogleTagManagerID != ''" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div data-url="page" data-role="page" id="page" ng-controller="HeaderController as headerCtrl">
+        <div data-role="content" class="content" id="content" ng-class="{'sportsMainPage': headerCtrl.isSportBook}">
+            <!-- Header Start -->
+            <div ng-include="'/partials/common/header.html'" onload="headerCtrl.onHeaderLoaded()"></div>
+            <!-- Header End -->
+
+            <div class="unverified-account-tooltip" ng-if="authCtrl.unverifiedAccount" ng-controller="PhoneVerificationPopupController as phoneVerificationPopupCtrl">
+                <div>
+                    {{::locale.account.phoneVerification.popup.verifyYourPhonePart1}}
+                    <span ng-if="phoneVerificationPopupCtrl.verifyData.daysLeft !== 0"><span>{{ phoneVerificationPopupCtrl.verifyData.daysLeft }}</span> {{::locale.account.phoneVerification.popup.verifyYourPhonePart2}}</span>
+                    <span ng-if="phoneVerificationPopupCtrl.verifyData.daysLeft !== 0 && phoneVerificationPopupCtrl.verifyData.hoursLeft !== 0"> {{::locale.account.phoneVerification.popup.verifyYourPhonePart3}} </span>
+                    <span ng-if="phoneVerificationPopupCtrl.verifyData.hoursLeft !== 0"><span>{{ phoneVerificationPopupCtrl.verifyData.hoursLeft }}</span> {{::locale.account.phoneVerification.popup.verifyYourPhonePart4}}</span>
+                    {{::locale.account.phoneVerification.popup.verifyYourPhonePart5}}
+                </div>
+                <button class="btn" ng-if="phoneVerificationPopupCtrl.verifyData.type === 'VerifyInProgress'" ng-click="phoneVerificationPopupCtrl.verifyExistingPhoneNumber()">
+                    <span class="btn-text">{{::locale.account.phoneVerification.popup.verifyExistingPhoneNumber}}</span>
+                </button>
+            </div>
+
+            <div id="view-container">
+                <div ng-view></div>
+            </div>
+
+            <!-- SFK Chat IFrame -->
+            <div class="sfk-frame-container" ng-if="globalSettings.LiveChatIntegration.toLowerCase() === 'sfk'" style="display: none;">
+                <div class="sfk-header">
+                    <div class="sfk-header-text">Live Chat</div>
+                    <div class="fa fa-times" aria-hidden="true" ng-click="mainCtrl.closeLiveChat()">X</div>
+                </div>
+                <iframe id="sfkFrame" name="sfkFrame" src=""></iframe>
+            </div>
+        </div>
+    </div>
+
+    
+        <div id="sfkTracker" style="display: none"></div>
+        <script type="text/javascript">
+            window.onload = function () {
+                if (!window._laq) { window._laq = []; }
+                window._laq.push(function () {
+                    liveagent.showWhenOnline('5734J000000Ckhg', document.getElementById('sfkTracker'));
+
+                    liveagent.addButtonEventHandler('5734J000000Ckhg', function btnEventHandler(e) {
+                        var liveAgentAvailable = false;
+                        if (e == liveagent.BUTTON_EVENT.BUTTON_AVAILABLE) {
+                            liveAgentAvailable = true;
+                        }
+                        window.sfkLiveChatAvailable = liveAgentAvailable;
+                    });  
+                });
+            }
+        </script>
+        <script async type="text/javascript" src="https://c.la1-c2cs-lo2.salesforceliveagent.com/content/g/js/46.0/deployment.js"
+                onload="liveagent.init('https://d.la1-c2cs-lo2.salesforceliveagent.com/chat', '5724J000000CjxX', '00D4J000000CuuI');">
+        </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"742830109b32b87e","token":"d28862f4396a421a9d3d321bbdd5b5aa","version":"2022.8.0","si":100}' crossorigin="anonymous"></script>
+</body>
+</html> 
