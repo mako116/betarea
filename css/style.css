@@ -383,6 +383,9 @@ font-size: 15px;
     box-shadow: 0 0 15px rgba(0, 0, 0, .2);
 } */
 
+footer{
+    height: 50vh;
+}
 .footer_soft {
     width: 100%;
     height: 100%;
@@ -435,112 +438,202 @@ font-size: 15px;
 .copyright {
     text-align: center;
     margin-top: 40px;
-    /* margin-left: 50px; */
+    margin-left: 50px; 
 }
 
  
-    @media screen and (max-width:580px) {
-    body {
-        height: 100vh;
+    @media screen and (max-width:1440px) {
+        footer{
+            height: 20vh;
+        } 
     }
-    header {
-        height: 50px;
-        padding-left: 5px;
+    @media screen and (max-width:1024px) {
+        .heading{
+            height: 20px;
+        }
+        .btn {
+            position: absolute;
+            top: 2%;
+            left: 80%;
+        }
+        
+        .Block_division {
+            margin-left: 0em;
+        }
+        .football_shop {
+             width: 60%;
+        }
+         
     }
-    .logo {
-        width: 80px;
-        margin-bottom: 14px;
+    @media screen and (max-width:880px) {
+        .btn {
+            position: absolute;
+            top: 2%;
+            left: 75%;
+        }
     }
-    .betking_block {
-        width: 100%;
-        height: 10px;
-        display: flex;
-        justify-content: flex-start;
-        padding-left: 10px;
-        align-items: center;
+    @media screen and (max-width:820px) {
+        .btn {
+            position: absolute;
+            top: 1%;            
+        }
+        .Block_division  {
+            display: none;
+        }
+        footer{
+            height: 25vh;
+        } 
     }
-    .bet-box {
-        margin-top: 50%;
-        display: block;
-    }
-
-    .Block_division {
-        display: none;
+    @media screen and (max-width:768px) {
+        .heading{
+            height: 10px;
+        }
+    .logo img{
+        width: 30px;
     }
     .btn {
-        top: 2%;
-        left: 68vh;
-        width: 55px;
+   
+        width: 50px;
+        height: 30px;
+        font-size: 15px;
+    }
+    .crown{
+        padding: 12px;
         height: 33px;
-        border-radius: 6px;
+     }
+     .crown i{
+         font-size: 10px;
+     }
+     
+.Block_division  {
+    display: none;
+}
+.football_shop {
+    width: 80%;
+}
+    }
+    @media(max-width:633px){
+        .crown{display: none;
+        }
+        .football_shop span {
+              font-size: 13px;  
+    }
+    .btn {
+        width: 50px;
+        height: 25px;
         font-size: 12px;
-        color: #000;
     }
-    .Table_list {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        align-items: center;
-        text-align: center;
-        height: 0px;
-        color: #000;
-        background-color: transparent;
-        border-top: none;
+    .logo img{
+        width: 25px;
     }
-    .table_controls {
-        display: none;
+}
+    @media(max-width:627px){
+        .football_shop {
+            width: 80%;
+        }
+        .containment {
+             padding-left: 0px;
+            padding-right: 0px;
+         }
+
     }
-    .table_controls h5 {
-        display: none;
+   
+    @media(max-width:546px){
+        .logo img{
+            width: 22px;
+        }
+        .btn {
+            width: 40px;
+            height: 22px;
+            font-size: 10px;
+            left: 85%;
+        }
     }
-    .football_notify {
-        display: block;
-        line-height: 20px;
-        color: #000;
-        background-color: #fff;
-    }
-    .containment {
-        display: flex;
-        /* align-items: center; */
-        background-color: #fff;
-        color: #000;
-        margin-top: 3px;
-        text-align: center;
-        justify-content: start;
-        padding-left: 10px;
-        padding-right: 0px;
-    }
-    .football_shop {
-        width: 100px;
-        column-gap: 5px;
-        font-size: 13px;
-        text-align: center;
-    }
+    @media(max-width:479px){
     .football_shop span {
-        width: 100px;
-        color: #000;
-        font-weight: bold;
-        font-size: 12px;
-        padding: 10px;
-        border: 1px solid gold;
-        margin-bottom: 15px;
-        border-radius: 7px;
-        text-align: center;
+        margin-top: 5px;
+         font-size: 10px;
+    }
+    .btn {
+         top: 1%;
+        left: 85%;
+    }
+.odds_rotation {
+    gap: 30px;
+    padding: 0px;
+     top: 0px;
+    left: 0vh;
+    margin-bottom: 20px;
+}
+.button {
+     padding: 5px;
+}
+.btn {
+    width: 40px;
+    height: 20px;
+    font-size: 10px;
+}
+.crown{
+    display: none; 
+ }
+ 
+.table_controls span {
+    border-radius: 20px;
+font-size: 10px;
+     
+} 
+.cashout {
+     height: 70vh;
+ }
+ .logo img{
+    width: 20px;
+}
+.heading{
+    margin-left: 10px;
+}
+    }
+    .bet-box h2 {
+        font-size: 24px;
+        margin-left: 10px;
+         margin-top: 50px;
+    }
+    .hightlighten{
+        font-size: 44px;
+    }
+    .bet-box p {
+         font-size: 12px;
+        margin-left: 15px;
+    }
+    .cashout {
+        height: 40vh;
+    }
+@media(max-width:375px){
+    .football_shop {
+        width: 90%;
     }
     .odds_rotation {
-        display: flex;
-        align-items: center;
-        gap: 10;
-        padding: 10px;
-        position: flex;
-         bottom: 2vh;
         left: 5vh;
     }
     .button {
-        display: flex;
-        padding: 10px;
-        border-radius: 10px;
-        border: none;
-        cursor: pointer;
+        font-size: 10px;
+   }
+   .bet-box h2 {
+    font-size: 34px;
+    margin-left: 10px;
+     margin-top: 50px;
+}
+.cashout {
+     height: 40vh;
+ }
+ .bet-box p {
+    color: #fff;
+    font-size: 12px;
+    margin-left: 15px;
+
+}
+}
+@media(max-width:320px){
+    .odds_rotation {
+        left: 4vh;
     }
 }
